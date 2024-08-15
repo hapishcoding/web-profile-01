@@ -1,0 +1,188 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+header{
+    background: #1a2238;
+    color: #eaeaea;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    margin-right: auto;
+}
+.logo-img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.btn-cta{
+    margin-right: 10px;
+    border: none;
+    font-size: 15px;
+    padding: 6px 12px;
+    background: #0051ff;
+    color: #eaeaea;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    padding: 20px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+}
+li a{
+    transition: all .5s ease 0s;
+    display: inline-block;
+}
+li a:hover{
+    color: #0051ff;
+    transform: rotate(2deg);
+}
+
+a{
+    color: #eaeaea;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.img-foto{
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+.parallax{
+    background-image: url('../assets/foto/background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+    height: 110vh;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0300b1;
+    padding: 25px;
+    text-align: center;
+    text-shadow: 10px 10px 10px rgba(177, 7, 7, 10);
+}
+
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-item{
+    width: 20%;
+    background: #f7f7f7;
+    color: #222;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.5);
+}
+
+.card-title{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-describe{
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 300px;
+    padding: 4px;
+    object-fit: cover;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: #1a2238;
+    color: #eaeaea;
+}
+
+@media(max-width: 500px){
+    .card{
+        flex-direction: column;
+    }
+    .card-item{
+        width: 100%;
+    }
+    .intro{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .container{
+        width: 100%;
+        padding: 0;
+        padding-bottom: 140px; /* Pastikan ini cukup untuk menghindari overlap */
+    }
+    .img-foto{
+        padding: 0;
+    }
+    nav{
+        position: fixed;
+        width: 100%;
+        bottom: 70px; /* Sesuaikan dengan tinggi footer */
+        background: #1a2238;
+        z-index: 10;
+    }
+    footer{
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background: #1a2238;
+        z-index: 9;
+        height: 70px; /* Pastikan tinggi sesuai dengan konten */
+        margin: 0;
+    }
+}
